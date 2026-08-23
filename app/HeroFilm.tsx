@@ -76,7 +76,7 @@ export default function HeroFilm() {
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
             {activeFilm?.kind === "video" ? (
-              <video ref={videoRef} loop playsInline preload="metadata" aria-label={activeFilm.label}>
+              <video className={filmIndex === 1 ? "film-wide" : undefined} ref={videoRef} loop playsInline preload="metadata" aria-label={activeFilm.label}>
                 <source src={activeFilm.src} type="video/mp4" />
               </video>
             ) : null}
@@ -91,8 +91,9 @@ export default function HeroFilm() {
         </div>
       </div>
       <div className="vcr-cabinet" aria-label="American Bear VCR controls">
-        <div className="vcr-brand">COLORVISION VCR-88 <span>HI-FI STEREO</span></div>
-        <div className="vcr-slot"><i /> <b>AMERICAN BEAR VIDEO</b></div>
+        <img className="cabinet-reference" src="/art/wood-cabinet-reference.png" alt="Wooden television cabinet" />
+        <img className="vcr-reference" src="/art/vcr-reference.jpg" alt="Vintage VCR" />
+        <div className="vcr-brand">TIME COMMANDER · AMERICAN BEAR</div>
         <div className="vcr-controls">
           <button type="button" onClick={() => seek(-10)} aria-label="Rewind 10 seconds">◀◀</button>
           <button className="vcr-play" type="button" onClick={togglePower} aria-label={powered ? "Stop video" : "Play video"}>{powered ? "■" : "▶"}</button>
