@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const films = [
   { kind: "video", src: "/media/american-bear.mp4", label: "American Bear film" },
-  { kind: "video", src: "/media/american-bear-alternate.mp4", label: "American Bear alternate film" },
+  { kind: "video", src: "/media/2026-08-22 22.04.52-2-2 (1).mp4", label: "American Bear alternate film" },
 ];
 
 export default function HeroFilm() {
