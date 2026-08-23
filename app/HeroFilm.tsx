@@ -76,7 +76,7 @@ export default function HeroFilm() {
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
             {activeFilm?.kind === "video" ? (
-              <video className={filmIndex === 1 ? "film-wide" : undefined} ref={videoRef} loop playsInline preload="metadata" aria-label={activeFilm.label}>
+              <video ref={videoRef} loop playsInline preload="metadata" aria-label={activeFilm.label}>
                 <source src={activeFilm.src} type="video/mp4" />
               </video>
             ) : null}
