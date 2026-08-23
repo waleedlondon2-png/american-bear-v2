@@ -91,6 +91,7 @@ export default function HeroFilm() {
         </div>
       </div>
       <div className="vcr-cabinet" aria-label="American Bear VCR controls">
+        <img className="original-vcr-cabinet" src="/art/american-bear-vcr-cabinet.png" alt="Dark walnut cabinet with a vintage VCR" />
         <div className="vcr-shelf">
           <div className="vcr-display">00:00 <span>VHS</span></div>
           <div className="vcr-deck"><i /><b>AMERICAN BEAR VIDEO</b><i /></div>
