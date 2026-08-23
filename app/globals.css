@@ -139,3 +139,6 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Keep the functional VCR keys visually invisible over the original artwork. */
 .vcr-key:hover,.vcr-key:focus-visible,.vcr-key:active{outline:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
+
+/* Fill the curved CRT picture tube with a gentle widescreen treatment. */
+.tv-screen video,.tv-screen video.film-wide{object-fit:cover!important;transform:scaleX(1.06)!important;transform-origin:center}
