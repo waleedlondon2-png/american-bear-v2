@@ -35,10 +35,7 @@ export default function Home() {
       {chapters.map((chapter,index)=><article className={`chapter chapter-${index}`} id={chapter.id} key={chapter.id}>
         <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-polaroids" aria-label="The Biggest Show on Earth gallery">
-          {Array.from({ length: 20 }, (_, index) => {
-            const image = biggestShowImages[index % biggestShowImages.length];
-            return <figure className="show-polaroid" key={`${image.src}-${index}`}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>;
-          })}
+          {biggestShowImages.map((image)=><figure className="show-polaroid" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}
         </div> : <figure className="chapter-art">
           <div className="vhs-case">
             <span className="vhs-sticker vhs-sticker-left">VHS</span>
