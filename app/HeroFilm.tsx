@@ -1,12 +1,9 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
-
 const films = [
   { kind: "video", src: "/media/american-bear.mp4", label: "American Bear film" },
   { kind: "embed", src: "https://streamable.com/e/8plyph", label: "American Bear alternate film" },
 ];
-
 export default function HeroFilm() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const bootTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
@@ -15,69 +12,40 @@ export default function HeroFilm() {
   const [booting, setBooting] = useState(false);
   const [filmIndex, setFilmIndex] = useState<number | null>(null);
   const activeFilm = filmIndex === null ? null : films[filmIndex];
-
   useEffect(() => () => {
     if (bootTimer.current) window.clearTimeout(bootTimer.current);
     if (startTimer.current) window.clearTimeout(startTimer.current);
   }, []);
-
   useEffect(() => {
     const video = videoRef.current;
     if (!video || !powered || activeFilm?.kind !== "video") return;
-    video.load();
-    video.currentTime = 0;
-    video.muted = true;
-    void video.play();
+    video.load(); video.currentTime = 0; video.muted = true; void video.play();
   }, [filmIndex, powered, activeFilm?.kind]);
-
   const togglePower = () => {
     const video = videoRef.current;
     if (bootTimer.current) window.clearTimeout(bootTimer.current);
     if (startTimer.current) window.clearTimeout(startTimer.current);
     if (powered) {
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-        video.muted = true;
-      }
-      setPowered(false);
-      setBooting(false);
-      setFilmIndex(null);
-      return;
+      if (video) { video.pause(); video.currentTime = 0; video.muted = true; }
+      setPowered(false); setBooting(false); setFilmIndex(null); return;
     }
     const nextFilmIndex = Math.floor(Math.random() * films.length);
-    setPowered(true);
-    setBooting(true);
+    setPowered(true); setBooting(true);
     bootTimer.current = window.setTimeout(() => setBooting(false), 720);
     startTimer.current = window.setTimeout(() => setFilmIndex(nextFilmIndex), 1720);
   };
-
-  return (
-    <section className="film" aria-label="American Bear film">
-      <div className="film-title">
-        <p>AN AMERICAN ORIGINAL</p>
-        <h2>BORN FREE.<br />RAISED LOUD.</h2>
+  return <section className="film" aria-label="American Bear film">
+    <div className="film-title"><p>AN AMERICAN ORIGINAL</p><h2>BORN FREE.<br />RAISED LOUD.</h2></div>
+    <div className="film-media"><div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
+      <div className="tv-screen">
+        {activeFilm?.kind === "video" ? <video ref={videoRef} loop playsInline preload="metadata" poster="/art/bear-modern.jpg" aria-label={activeFilm.label}><source src={activeFilm.src} type="video/mp4" /></video>
+        : activeFilm?.kind === "embed" ? <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen style={{ display: "block", width: "100%", height: "100%", border: 0 }} />
+        : null}
+        <div className="film-shade" />
       </div>
-      <div className="film-media">
-        <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
-          <div className="tv-screen">
-            {activeFilm?.kind === "video" ? (
-              <video ref={videoRef} loop playsInline preload="metadata" poster="/art/bear-modern.jpg" aria-label={activeFilm.label}>
-                <source src={activeFilm.src} type="video/mp4" />
-              </video>
-            ) : activeFilm?.kind === "embed" ? (
-              <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen style={{ display: "block", width: "100%", height: "100%", border: 0 }} />
-            )}
-            <div className="film-shade" />
-          </div>
-          <button className="power-dial" type="button" onClick={togglePower} aria-pressed={powered} aria-label={powered ? "Turn television off" : "Turn television on"}>
-            <i aria-hidden="true" />
-            <span>{powered ? "OFF" : "ON"}</span>
-          </button>
-          <b className="power-led" aria-hidden="true" />
-          <div className="tv-console" aria-hidden="true"><span>COLORVISION 1988</span><i/><i/><b>VHF · UHF</b></div>
-        </div>
-      </div>
-    </section>
-  );
+      <button className="power-dial" type="button" onClick={togglePower} aria-pressed={powered} aria-label={powered ? "Turn television off" : "Turn television on"}><i aria-hidden="true" /><span>{powered ? "OFF" : "ON"}</span></button>
+      <b className="power-led" aria-hidden="true" />
+      <div className="tv-console" aria-hidden="true"><span>COLORVISION 1988</span><i/><i/><b>VHF · UHF</b></div>
+    </div></div>
+  </section>;
 }
