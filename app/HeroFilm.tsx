@@ -66,6 +66,29 @@ export default function HeroFilm() {
     video.currentTime = Math.max(0, Math.min(video.duration || 0, video.currentTime + seconds));
   };
 
+  const playVideo = () => {
+    const video = videoRef.current;
+    if (!powered) {
+      togglePower();
+      return;
+    }
+    if (video) void video.play();
+  };
+
+  const togglePause = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) void video.play();
+    else video.pause();
+  };
+
+  const stopVideo = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.pause();
+    video.currentTime = 0;
+  };
+
   return (
     <section className="film" aria-label="American Bear film">
       <div className="film-title">
@@ -97,10 +120,15 @@ export default function HeroFilm() {
           <div className="vcr-deck"><i /><b>AMERICAN BEAR VIDEO</b><i /></div>
         </div>
         <div className="vcr-brand">COLORVISION · TIME COMMANDER <span>HI-FI STEREO</span></div>
-        <div className="vcr-controls">
-          <button type="button" onClick={() => seek(-10)} aria-label="Rewind 10 seconds">◀◀</button>
-          <button className="vcr-play" type="button" onClick={togglePower} aria-label={powered ? "Stop video" : "Play video"}>{powered ? "■" : "▶"}</button>
-          <button type="button" onClick={() => seek(10)} aria-label="Fast forward 10 seconds">▶▶</button>
+        <div className="vcr-key-controls" aria-label="VCR playback controls">
+          <button className="vcr-key vcr-key-pause-left" type="button" onClick={togglePause} aria-label="Pause or resume video" />
+          <button className="vcr-key vcr-key-stop" type="button" onClick={stopVideo} aria-label="Stop and rewind video" />
+          <button className="vcr-key vcr-key-rewind" type="button" onClick={() => seek(-10)} aria-label="Rewind 10 seconds" />
+          <button className="vcr-key vcr-key-restart" type="button" onClick={() => { stopVideo(); playVideo(); }} aria-label="Restart video" />
+          <button className="vcr-key vcr-key-play" type="button" onClick={playVideo} aria-label="Play video" />
+          <button className="vcr-key vcr-key-fast-forward" type="button" onClick={() => seek(10)} aria-label="Fast forward 10 seconds" />
+          <span className="vcr-key-record" aria-hidden="true" />
+          <button className="vcr-key vcr-key-pause-right" type="button" onClick={togglePause} aria-label="Pause or resume video" />
         </div>
       </div>
     </section>
