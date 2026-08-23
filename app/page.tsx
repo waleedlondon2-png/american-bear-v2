@@ -33,7 +33,7 @@ export default function Home() {
 
     <section className="chapters">
       {chapters.map((chapter,index)=><article className={`chapter chapter-${index}`} id={chapter.id} key={chapter.id}>
-        <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2><span className={`bear-cameo bear-cameo-${index + 1}`} aria-hidden="true"/></header>
+        <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-polaroids" aria-label="The Biggest Show on Earth gallery">
           {biggestShowImages.map((image)=><figure className="show-polaroid" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}
         </div> : <figure className="chapter-art">
