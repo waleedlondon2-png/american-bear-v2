@@ -66,7 +66,7 @@ export default function HeroFilm() {
                 <source src={activeFilm.src} type="video/mp4" />
               </video>
             ) : activeFilm?.kind === "embed" ? (
-              <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen />
+              <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen style={{ display: "block", width: "100%", height: "100%", border: 0 }} />
             )}
             <div className="film-shade" />
           </div>
