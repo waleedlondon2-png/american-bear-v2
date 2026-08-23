@@ -13,14 +13,10 @@ const chapters = [
 ];
 
 const biggestShowImages = [
-  { src:"/art/america-movie-collage-v1.png", alt:"A panoramic American movie universe", label:"MOVIES · 1" },
-  { src:"/art/america-sports-bear-supporter-v11.png", alt:"American Bear among major American sports", label:"SPORTS · 1" },
-  { src:"/art/america-tv-icons-muppets-v1.png", alt:"Classic American television icons", label:"LIVING COLOR · 1" },
-  { src:"/art/america-crime-cinema-chuck-v1.png", alt:"American crime cinema and action television", label:"LATE NIGHT · 1" },
-  { src:"/art/america-movie-collage-v1.png", alt:"A different movie moment", label:"MOVIES · 2" },
-  { src:"/art/america-sports-bear-supporter-v11.png", alt:"A different sports moment", label:"SPORTS · 2" },
-  { src:"/art/america-tv-icons-muppets-v1.png", alt:"A different television moment", label:"LIVING COLOR · 2" },
-  { src:"/art/america-crime-cinema-chuck-v1.png", alt:"A different late-night moment", label:"LATE NIGHT · 2" },
+  { src:"/art/america-movie-collage-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", label:"THE MOVIES" },
+  { src:"/art/america-sports-bear-supporter-v11.png", alt:"American Bear among boxing, football, baseball, basketball, NASCAR, athletics and rodeo", label:"THE SPORTS" },
+  { src:"/art/america-tv-icons-muppets-v1.png", alt:"Classic American television icons including Knight Rider, the A-Team, Alf, Kermit and Miss Piggy", label:"LIVING COLOR" },
+  { src:"/art/america-crime-cinema-chuck-v1.png", alt:"American crime cinema and action television scene", label:"LATE NIGHT" },
 ];
 
 export default function Home() {
@@ -39,7 +35,10 @@ export default function Home() {
       {chapters.map((chapter,index)=><article className={`chapter chapter-${index}`} id={chapter.id} key={chapter.id}>
         <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-polaroids" aria-label="The Biggest Show on Earth gallery">
-          {biggestShowImages.map((image,index)=><figure className={`show-polaroid show-polaroid-${index + 1}`} key={image.label}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}
+          {Array.from({ length: 20 }, (_, index) => {
+            const image = biggestShowImages[index % biggestShowImages.length];
+            return <figure className="show-polaroid" key={`${image.src}-${index}`}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>;
+          })}
         </div> : <figure className="chapter-art">
           <div className="vhs-case">
             <span className="vhs-sticker vhs-sticker-left">VHS</span>
