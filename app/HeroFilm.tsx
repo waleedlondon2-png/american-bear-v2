@@ -13,8 +13,8 @@ export default function HeroFilm() {
   const startTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
   const [powered, setPowered] = useState(false);
   const [booting, setBooting] = useState(false);
-  const [filmIndex, setFilmIndex] = useState(0);
-  const activeFilm = films[filmIndex];
+  const [filmIndex, setFilmIndex] = useState<number | null>(null);
+  const activeFilm = filmIndex === null ? null : films[filmIndex];
 
   useEffect(() => () => {
     if (bootTimer.current) window.clearTimeout(bootTimer.current);
@@ -23,11 +23,12 @@ export default function HeroFilm() {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || !powered) return;
+    if (!video || !powered || activeFilm?.kind !== "video") return;
     video.load();
     video.currentTime = 0;
     video.muted = true;
-  }, [filmIndex, powered]);
+    void video.play();
+  }, [filmIndex, powered, activeFilm?.kind]);
 
   const togglePower = () => {
     const video = videoRef.current;
@@ -41,20 +42,14 @@ export default function HeroFilm() {
       }
       setPowered(false);
       setBooting(false);
+      setFilmIndex(null);
       return;
     }
-    setFilmIndex(Math.floor(Math.random() * films.length));
+    const nextFilmIndex = Math.floor(Math.random() * films.length);
     setPowered(true);
     setBooting(true);
-    bootTimer.current = window.setTimeout(() => {
-      setBooting(false);
-    }, 720);
-    startTimer.current = window.setTimeout(() => {
-      if (!video) return;
-      video.currentTime = 0;
-      video.muted = false;
-      void video.play();
-    }, 1720);
+    bootTimer.current = window.setTimeout(() => setBooting(false), 720);
+    startTimer.current = window.setTimeout(() => setFilmIndex(nextFilmIndex), 1720);
   };
 
   return (
@@ -66,12 +61,12 @@ export default function HeroFilm() {
       <div className="film-media">
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
-            {activeFilm.kind === "video" ? (
+            {activeFilm?.kind === "video" ? (
               <video ref={videoRef} loop playsInline preload="metadata" poster="/art/bear-modern.jpg" aria-label={activeFilm.label}>
                 <source src={activeFilm.src} type="video/mp4" />
               </video>
-            ) : (
-              <iframe src={`${activeFilm.src}?`} title={activeFilm.label} allow="fullscreen" allowFullScreen />
+            ) : activeFilm?.kind === "embed" ? (
+              <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen />
             )}
             <div className="film-shade" />
           </div>
