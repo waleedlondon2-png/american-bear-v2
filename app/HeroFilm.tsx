@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 const films = [
-  { kind: "video", src: "/media/american-bear.mp4", label: "American Bear film" },
-  { kind: "embed", src: "https://streamable.com/e/8plyph", label: "American Bear alternate film" },
+  { src: "/media/american-bear.mp4", label: "American Bear film" },
+  { src: "https://cdn-cf-east.streamable.com/video/mp4/8plyph.mp4", label: "American Bear alternate film" },
 ];
 export default function HeroFilm() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -18,9 +18,10 @@ export default function HeroFilm() {
   }, []);
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || !powered || activeFilm?.kind !== "video") return;
-    video.load(); video.currentTime = 0; video.muted = true; void video.play();
-  }, [filmIndex, powered, activeFilm?.kind]);
+    if (!video || !powered || !activeFilm) return;
+    video.load(); video.currentTime = 0; video.muted = true;
+    void video.play().then(() => { video.muted = false; });
+  }, [filmIndex, powered, activeFilm]);
   const togglePower = () => {
     const video = videoRef.current;
     if (bootTimer.current) window.clearTimeout(bootTimer.current);
@@ -38,9 +39,7 @@ export default function HeroFilm() {
     <div className="film-title"><p>AN AMERICAN ORIGINAL</p><h2>BORN FREE.<br />RAISED LOUD.</h2></div>
     <div className="film-media"><div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
       <div className="tv-screen">
-        {activeFilm?.kind === "video" ? <video ref={videoRef} loop playsInline preload="metadata" poster="/art/bear-modern.jpg" aria-label={activeFilm.label}><source src={activeFilm.src} type="video/mp4" /></video>
-        : activeFilm?.kind === "embed" ? <iframe src={`${activeFilm.src}?autoplay=1&muted=1&loop=0&controls=0`} title={activeFilm.label} allow="autoplay; fullscreen" allowFullScreen style={{ display: "block", width: "100%", height: "100%", border: 0 }} />
-        : null}
+        {activeFilm ? <video ref={videoRef} loop playsInline preload="metadata" poster="/art/bear-modern.jpg" aria-label={activeFilm.label}><source src={activeFilm.src} type="video/mp4" /></video> : null}
         <div className="film-shade" />
       </div>
       <button className="power-dial" type="button" onClick={togglePower} aria-pressed={powered} aria-label={powered ? "Turn television off" : "Turn television on"}><i aria-hidden="true" /><span>{powered ? "OFF" : "ON"}</span></button>
