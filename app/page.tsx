@@ -26,7 +26,7 @@ export default function Home() {
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
       <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
-      <img src="/art/america-money-guns-rushmore-jets-v9.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/>
+      <img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/>
     </section>
 
     <nav className="timeline" aria-label="American chapters">{chapters.map((chapter,index)=><a href={`#${chapter.id}`} key={chapter.id}><b>{String(index+1).padStart(2,"0")}</b><span>{chapter.id}</span></a>)}</nav>
