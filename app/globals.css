@@ -156,3 +156,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Give The Biggest Show on Earth artwork a proper full-size cinema-gallery scale. */
 .show-polaroids{grid-template-columns:1fr;max-width:1280px;gap:clamp(30px,4vw,64px)}.show-polaroid{padding:clamp(12px,1.4vw,20px) clamp(12px,1.4vw,20px) clamp(30px,3.2vw,48px)!important}.show-polaroid img{aspect-ratio:auto;max-height:none;object-fit:contain!important;background:#101217}
+
+
+/* Brighter cartoon finish for all image chapters, except the NWA police-stop and arcade artwork. */
+.money-break>img,.show-polaroid img,.chapter:not(.chapter-2) .vhs-window>img{filter:saturate(1.34) contrast(1.16) brightness(1.05);image-rendering:auto}.money-break>img,.chapter:not(.chapter-2) .vhs-window>img{box-shadow:0 0 0 2px rgba(246,220,146,.18),0 18px 38px rgba(0,0,0,.35)}.show-polaroid img{box-shadow:inset 0 0 0 2px rgba(246,220,146,.18)}
