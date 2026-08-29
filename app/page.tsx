@@ -26,7 +26,7 @@ export default function Home() {
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
       <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
-      <img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/>
+      <div className="cartoon-art money-cartoon"><img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
     </section>
 
     <nav className="timeline" aria-label="American chapters">{chapters.map((chapter,index)=><a href={`#${chapter.id}`} key={chapter.id}><b>{String(index+1).padStart(2,"0")}</b><span>{chapter.id}</span></a>)}</nav>
@@ -35,13 +35,13 @@ export default function Home() {
       {chapters.map((chapter,index)=><article className={`chapter chapter-${index}`} id={chapter.id} key={chapter.id}>
         <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-polaroids" aria-label="The Biggest Show on Earth gallery">
-          {biggestShowImages.map((image)=><figure className="show-polaroid" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}
+          {biggestShowImages.map((image)=><figure className="show-polaroid cartoon-art" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}
         </div> : <figure className="chapter-art">
           <div className="vhs-case">
             <span className="vhs-sticker vhs-sticker-left">VHS</span>
             <span className="vhs-sticker vhs-sticker-right">HI-FI</span>
             <span className="vhs-title">AMERICAN BEAR · {chapter.id.toUpperCase()} · HOME VIDEO</span>
-            <div className="vhs-window"><img src={chapter.src} alt={chapter.alt}/></div>
+            <div className={`vhs-window ${chapter.id === "streets" ? "" : "cartoon-art"}`}><img src={chapter.src} alt={chapter.alt}/></div>
             <span className="vhs-spool vhs-spool-left" aria-hidden="true"/><span className="vhs-spool vhs-spool-right" aria-hidden="true"/>
             <span className="chapter-number">{String(index+1).padStart(2,"0")}</span>
           </div>
