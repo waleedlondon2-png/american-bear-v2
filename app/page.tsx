@@ -21,7 +21,7 @@ const biggestShowImages = [
 
 export default function Home() {
   return <main id="top">
-    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><a href="#chapters">ENTER THE SHOW ↓</a></header>
+    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><nav className="room-directory" aria-label="Living room directory"><a href="#top">TV</a><a href="#movies">SHOW</a><a href="#power">FRAMES</a><a href="#streets">WALL</a><a href="#now">CAFÉ</a><a href="#token">TOKEN</a></nav></header>
     <HeroFilm />
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
