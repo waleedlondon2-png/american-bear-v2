@@ -131,13 +131,6 @@ export default function HeroFilm() {
           <button className="vcr-key vcr-key-pause-right" type="button" onClick={togglePause} aria-label="Pause or resume video" />
         </div>
       </div>
-      <div className="living-room-furnishings" aria-hidden="true">
-        <div className="lounge-chair lounge-chair-left"><i /></div>
-        <div className="lounge-chair lounge-chair-right"><i /></div>
-        <div className="coffee-table"><span className="dial-phone"><i /></span><b>CHANNEL 4</b></div>
-        <div className="dining-set"><i /><i /><i /></div>
-        <div className="table-frames"><span /><span /><span /></div>
-      </div>
     </section>
   );
 }
