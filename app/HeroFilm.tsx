@@ -95,18 +95,6 @@ export default function HeroFilm() {
         <p>AN AMERICAN ORIGINAL</p>
         <h2>BORN FREE.<br />RAISED LOUD.</h2>
       </div>
-      <div className="room-stage">
-        <p className="room-instruction">EXPLORE THE ROOM</p>
-        <div className="room-wall-gallery" aria-label="Living room wall artwork">
-          <a className="room-frame room-frame-money" href="#chapters"><img src="/art/america-money-guns-reframed-v1.png" alt="Open money and mythology chapter"/></a>
-          <a className="room-frame room-frame-streets" href="#streets"><img src="/art/bear-police-lights-40.webp" alt="Open streets chapter"/></a>
-        </div>
-        <nav className="room-hotspots" aria-label="Explore the American Bear living room">
-          <a className="room-hotspot hotspot-tv" href="#movies">THE SHOW</a>
-          <a className="room-hotspot hotspot-frames" href="#power">THE FRAMES</a>
-          <a className="room-hotspot hotspot-phone" href="#now">THE CAFÉ</a>
-          <a className="room-hotspot hotspot-arcade" href="#arcade">THE ARCADE</a>
-        </nav>
       <div className="film-media">
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
@@ -142,7 +130,6 @@ export default function HeroFilm() {
           <span className="vcr-key-record" aria-hidden="true" />
           <button className="vcr-key vcr-key-pause-right" type="button" onClick={togglePause} aria-label="Pause or resume video" />
         </div>
-      </div>
       </div>
     </section>
   );
