@@ -105,7 +105,7 @@ export default function HeroFilm() {
           <a className="room-hotspot hotspot-tv" href="#movies">THE SHOW</a>
           <a className="room-hotspot hotspot-frames" href="#power">THE FRAMES</a>
           <a className="room-hotspot hotspot-phone" href="#now">THE CAFÉ</a>
-          <a className="room-hotspot hotspot-arcade" href="#streets">THE ARCADE</a>
+          <a className="room-hotspot hotspot-arcade" href="#arcade">THE ARCADE</a>
         </nav>
       <div className="film-media">
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
