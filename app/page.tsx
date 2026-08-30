@@ -6,13 +6,14 @@ function AgeBadge() {
 }
 
 const chapters = [
-  { id:"movies", era:"1930s — NOW", kicker:"HOLLYWOOD · TELEVISION · SPORT · HORROR · ACTION", title:"THE BIGGEST SHOW ON EARTH.", src:"/art/america-movie-collage-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", note:"Movies, sports and prime-time television all share one giant American backlot. The Bear has read the script and requested a larger trailer.", rating:"11/10", badge:"FINAL FINAL CUT" },
+  { id:"movies", era:"1776 — NOW", kicker:"POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME", title:"THIS IS AMERICA.", src:"/art/america-movie-collage-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", note:"Movies, sport, television, late nights, money and mythology now share one American backlot.", rating:"11/10", badge:"FINAL FINAL CUT" },
   { id:"power", era:"CAMPAIGN SEASON · EVERY SEASON", kicker:"POLITICS · MEDIA · PATRIOTISM · MOONSHOT", title:"EVERY PROMISE COMES WITH FIREWORKS.", src:"/art/america-politics-moonshot-v6.png", alt:"American political figures, media spectacle and an Apollo moon landing displayed as presidential history", note:"Campaign buses, flag pins, television maps and an Apollo moonshot preserved as presidential history. Broad satire; no party gets the good lighting.", rating:"8.4", badge:"FREEDOM MAXIMUM" },
   { id:"streets", era:"1980s — 1990s", kicker:"STREETS · RADIO · AUTHORITY · PROTEST", title:"THE CAMERA NEVER BLINKS.", src:"/art/bear-police-lights-40.webp", alt:"American Bear and musicians in a satirical police scene", note:"A harder, louder chapter about music, policing and who gets to control the story. Satire stays aimed at institutions and media spectacle.", rating:"8.8", badge:"LIVE FROM AMERICA" },
   { id:"now", era:"RIGHT NOW · UPDATED CONSTANTLY", kicker:"CRYPTO · MEMES · MEDIA · BOXING · MOBILITY", title:"THE FUTURE HAS A SALES PITCH.", src:"/art/america-modern-meme-class-v31.png", alt:"A coffee-bar scene with meme characters, seated patrons and four men under arrest beside police", note:"Coffee, crypto and meme culture share one bar: everyone settles in with a latte or frappé, while four arrested men remain exactly where the police left them.", rating:"9.0", badge:"APP OF THE FREE" },
 ];
 
 const biggestShowImages = [
+  { src:"/art/america-money-guns-reframed-v1.png", alt:"A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms", label:"THIS IS AMERICA" },
   { src:"/art/america-movie-collage-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", label:"THE MOVIES" },
   { src:"/art/america-sports-bear-supporter-v11.png", alt:"American Bear among boxing, football, baseball, basketball, NASCAR, athletics and rodeo", label:"THE SPORTS" },
   { src:"/art/america-tv-icons-muppets-v1.png", alt:"Classic American television icons including Knight Rider, the A-Team, Alf, Kermit and Miss Piggy", label:"LIVING COLOR" },
@@ -27,11 +28,6 @@ export default function Home() {
       <div className="meme-launch-copy"><p>THE ALL-AMERICAN MEME TOKEN</p><h1>$BEAR</h1><strong>BUILT FOR THE TIMELINE.</strong><span>NO ROADMAP THEATRE. JUST MEMES, CULTURE AND THE DEN.</span></div>
       <div className="meme-launch-actions"><a href="#token">TOKEN STATUS</a><a href="#chapters">ENTER THE LORE</a></div>
       <div className="meme-ticker" aria-label="American Bear ticker"><span>$BEAR</span><b>MEMES OVER MEETINGS</b><span>COMMUNITY FIRST</span><b>CONTRACT: TBA</b><span>AMERICAN BEAR</span></div>
-    </section>
-
-    <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
-      <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
-      <div className="money-cartoon"><img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
     </section>
 
     <nav className="timeline" aria-label="American chapters">{chapters.map((chapter,index)=><a href={`#${chapter.id}`} key={chapter.id}><b>{String(index+1).padStart(2,"0")}</b><span>{chapter.id}</span></a>)}</nav>
