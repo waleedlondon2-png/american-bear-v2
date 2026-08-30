@@ -21,12 +21,12 @@ const biggestShowImages = [
 
 export default function Home() {
   return <main id="top">
-    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><nav className="room-directory" aria-label="Living room directory"><a href="#top">TV</a><a href="#movies">SHOW</a><a href="#power">FRAMES</a><a href="#streets">WALL</a><a href="#now">CAFÉ</a><a href="#token">TOKEN</a></nav></header>
+    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><a href="#chapters">ENTER THE SHOW ↓</a></header>
     <HeroFilm />
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
       <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
-      <div className="money-cartoon wall-poster"><img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
+      <div className="money-cartoon"><img src="/art/america-money-guns-reframed-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
     </section>
 
     <nav className="timeline" aria-label="American chapters">{chapters.map((chapter,index)=><a href={`#${chapter.id}`} key={chapter.id}><b>{String(index+1).padStart(2,"0")}</b><span>{chapter.id}</span></a>)}</nav>
@@ -36,15 +36,12 @@ export default function Home() {
         <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-gallery" aria-label="The Biggest Show on Earth gallery">
           <div className="show-triptych">{biggestShowImages.map((image)=><figure className="show-polaroid" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}</div>
-        </div> : chapter.id === "power" ? <figure className="presidential-table">
-          <div className="presidential-frame"><img src={chapter.src} alt={chapter.alt}/></div>
-          <div className="table-surface"><span className="frame-small"/><span className="frame-small"/><span className="desk-phone">☎</span></div>
-        </figure> : chapter.id === "streets" ? <figure className="chapter-art room-wall-poster"><img src={chapter.src} alt={chapter.alt}/></figure> : <figure className="chapter-art crypto-display">
+        </div> : <figure className="chapter-art">
           <div className="vhs-case">
             <span className="vhs-sticker vhs-sticker-left">VHS</span>
             <span className="vhs-sticker vhs-sticker-right">HI-FI</span>
             <span className="vhs-title">AMERICAN BEAR · {chapter.id.toUpperCase()} · HOME VIDEO</span>
-            <div className="vhs-window"><img src={chapter.src} alt={chapter.alt}/></div>
+            <div className={`vhs-window ${""}`}><img src={chapter.src} alt={chapter.alt}/></div>
             <span className="vhs-spool vhs-spool-left" aria-hidden="true"/><span className="vhs-spool vhs-spool-right" aria-hidden="true"/>
             <span className="chapter-number">{String(index+1).padStart(2,"0")}</span>
           </div>
@@ -52,7 +49,7 @@ export default function Home() {
         <div className="chapter-foot"><details><summary>OPEN THE FILE +</summary><p>{chapter.note}</p></details><div className="rating"><span>BEAR’S TOTALLY OBJECTIVE RATING</span><b>{chapter.rating}</b></div><strong className="badge">★ {chapter.badge}</strong></div>
         {chapter.id==="appetite"&&<ArcadeGame artwork="/art/american-bear-arcade-v8.png"/>}
       </article>)}
-      <div id="arcade"><ArcadeGame artwork="/art/american-bear-arcade-v8.png" /></div>
+      <ArcadeGame artwork="/art/american-bear-arcade-v8.png" />
     </section>
 
     <section className="token" id="token"><p>AMERICAN BEAR</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>No contract yet. Ignore unofficial links.</span></section>
