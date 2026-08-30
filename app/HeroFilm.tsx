@@ -95,6 +95,7 @@ export default function HeroFilm() {
         <p>AN AMERICAN ORIGINAL</p>
         <h2>BORN FREE.<br />RAISED LOUD.</h2>
       </div>
+      <div className="room-stage">
       <div className="film-media">
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
@@ -130,6 +131,7 @@ export default function HeroFilm() {
           <span className="vcr-key-record" aria-hidden="true" />
           <button className="vcr-key vcr-key-pause-right" type="button" onClick={togglePause} aria-label="Pause or resume video" />
         </div>
+      </div>
       </div>
     </section>
   );
