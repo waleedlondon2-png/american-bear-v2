@@ -96,6 +96,10 @@ export default function HeroFilm() {
         <h2>BORN FREE.<br />RAISED LOUD.</h2>
       </div>
       <div className="room-stage">
+        <div className="room-wall-gallery" aria-label="Living room wall artwork">
+          <figure className="room-frame room-frame-money"><img src="/art/america-money-guns-reframed-v1.png" alt="American Bear money and mythology artwork"/></figure>
+          <figure className="room-frame room-frame-streets"><img src="/art/bear-police-lights-40.webp" alt="American Bear streets artwork"/></figure>
+        </div>
       <div className="film-media">
         <div className={`tv-set ${powered ? "is-on" : "is-off"}${booting ? " is-booting" : ""}`}>
           <div className="tv-screen">
