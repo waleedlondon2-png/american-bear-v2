@@ -52,7 +52,7 @@ export default function Home() {
         <div className="chapter-foot"><details><summary>OPEN THE FILE +</summary><p>{chapter.note}</p></details><div className="rating"><span>BEAR’S TOTALLY OBJECTIVE RATING</span><b>{chapter.rating}</b></div><strong className="badge">★ {chapter.badge}</strong></div>
         {chapter.id==="appetite"&&<ArcadeGame artwork="/art/american-bear-arcade-v8.png"/>}
       </article>)}
-      <ArcadeGame artwork="/art/american-bear-arcade-v8.png" />
+      <div id="arcade"><ArcadeGame artwork="/art/american-bear-arcade-v8.png" /></div>
     </section>
 
     <section className="token" id="token"><p>AMERICAN BEAR</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>No contract yet. Ignore unofficial links.</span></section>
