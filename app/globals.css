@@ -164,3 +164,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Strong comic-print treatment for the requested artwork only. */
 .cartoon-art{position:relative;isolation:isolate;overflow:hidden;background:#10131a}.cartoon-art>img{display:block;width:100%;height:auto;filter:saturate(1.55) contrast(1.32) brightness(1.1)!important;transform:scale(1.002)}.cartoon-art:before{content:"";position:absolute;z-index:2;inset:0;pointer-events:none;opacity:.34;background-image:radial-gradient(circle,rgba(255,226,137,.76) 0 1px,transparent 1.6px);background-size:5px 5px;mix-blend-mode:soft-light}.cartoon-art:after{content:"";position:absolute;z-index:3;inset:0;pointer-events:none;box-shadow:inset 0 0 0 3px rgba(14,18,27,.8),inset 0 0 0 7px rgba(255,222,131,.3);background:linear-gradient(135deg,rgba(255,71,122,.12),transparent 34%,rgba(20,153,219,.1));mix-blend-mode:color-burn}.money-cartoon{width:min(var(--content),calc(100% - (2 * var(--gutter))));margin:0 auto}.money-cartoon>img{width:100%!important}.show-polaroid.cartoon-art{isolation:isolate}.show-polaroid.cartoon-art figcaption{position:relative;z-index:4}.chapter-2 .vhs-window,.arcade-interlude{filter:none!important}.chapter-2 .vhs-window:before,.chapter-2 .vhs-window:after{content:none!important}
+
+
+/* Fresh 1980s artwork is delivered as final illustration; keep it clean and unfiltered. */
+.money-cartoon>img,.show-polaroid img,.chapter .vhs-window>img{filter:none!important;box-shadow:none!important}
