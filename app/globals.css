@@ -187,3 +187,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* The three Biggest Show images form one uninterrupted full-width composite. */
 .show-triptych{grid-template-columns:1fr;border:0;border-radius:0;box-shadow:none;background:#101217}.show-triptych .show-polaroid{aspect-ratio:auto}.show-triptych .show-polaroid+.show-polaroid{border-left:0!important;border-top:0!important}.show-triptych .show-polaroid img{height:auto!important;aspect-ratio:auto;object-fit:contain!important}.show-triptych .show-polaroid figcaption{display:none!important}
+
+
+/* Keep the $BEAR card as the one living-room element. */
+.token{position:relative;isolation:isolate;overflow:hidden;max-width:none!important;min-height:clamp(520px,56vw,820px);margin:0!important;padding:clamp(90px,11vw,180px) var(--gutter)!important;border:clamp(12px,1.2vw,22px) solid #5a3017!important;box-shadow:inset 0 0 0 clamp(5px,.55vw,10px) #d3a457,inset 0 0 0 clamp(12px,1.2vw,22px) #241208,0 18px 34px #150804;background:#3d2112 url("/art/american-bear-living-room-v1.png") center/cover no-repeat!important}.token:before{content:"";position:absolute;z-index:-1;inset:0;background:rgba(49,24,11,.79);pointer-events:none}.token>*{position:relative;z-index:1}.token p,.token h2,.token strong,.token span{color:#f3d48c!important;text-shadow:3px 3px #3a170b,0 5px 10px #000}.token h2{font-size:clamp(100px,18vw,280px)!important}.token strong{display:block;margin-top:clamp(24px,3vw,44px)}
