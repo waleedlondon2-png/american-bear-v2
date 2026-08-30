@@ -6,15 +6,15 @@ function AgeBadge() {
 }
 
 const chapters = [
-  { id:"movies", era:"1930s — NOW", kicker:"HOLLYWOOD · TELEVISION · SPORT · HORROR · ACTION", title:"THE BIGGEST SHOW ON EARTH.", src:"/art/america-movies-80s-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", note:"Movies, sports and prime-time television all share one giant American backlot. The Bear has read the script and requested a larger trailer.", rating:"11/10", badge:"FINAL FINAL CUT" },
-  { id:"power", era:"CAMPAIGN SEASON · EVERY SEASON", kicker:"POLITICS · MEDIA · PATRIOTISM · MOONSHOT", title:"EVERY PROMISE COMES WITH FIREWORKS.", src:"/art/america-politics-80s-v1.png", alt:"American political figures, media spectacle and an Apollo moon landing displayed as presidential history", note:"Campaign buses, flag pins, television maps and an Apollo moonshot preserved as presidential history. Broad satire; no party gets the good lighting.", rating:"8.4", badge:"FREEDOM MAXIMUM" },
+  { id:"movies", era:"1930s — NOW", kicker:"HOLLYWOOD · TELEVISION · SPORT · HORROR · ACTION", title:"THE BIGGEST SHOW ON EARTH.", src:"/art/america-movies-clean-v2.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", note:"Movies, sports and prime-time television all share one giant American backlot. The Bear has read the script and requested a larger trailer.", rating:"11/10", badge:"FINAL FINAL CUT" },
+  { id:"power", era:"CAMPAIGN SEASON · EVERY SEASON", kicker:"POLITICS · MEDIA · PATRIOTISM · MOONSHOT", title:"EVERY PROMISE COMES WITH FIREWORKS.", src:"/art/america-politics-clean-v2.png", alt:"American political figures, media spectacle and an Apollo moon landing displayed as presidential history", note:"Campaign buses, flag pins, television maps and an Apollo moonshot preserved as presidential history. Broad satire; no party gets the good lighting.", rating:"8.4", badge:"FREEDOM MAXIMUM" },
   { id:"streets", era:"1980s — 1990s", kicker:"STREETS · RADIO · AUTHORITY · PROTEST", title:"THE CAMERA NEVER BLINKS.", src:"/art/bear-police-lights-40.webp", alt:"American Bear and musicians in a satirical police scene", note:"A harder, louder chapter about music, policing and who gets to control the story. Satire stays aimed at institutions and media spectacle.", rating:"8.8", badge:"LIVE FROM AMERICA" },
   { id:"now", era:"RIGHT NOW · UPDATED CONSTANTLY", kicker:"CRYPTO · MEMES · MEDIA · BOXING · MOBILITY", title:"THE FUTURE HAS A SALES PITCH.", src:"/art/america-modern-meme-class-v31.png", alt:"A coffee-bar scene with meme characters, seated patrons and four men under arrest beside police", note:"Coffee, crypto and meme culture share one bar: everyone settles in with a latte or frappé, while four arrested men remain exactly where the police left them.", rating:"9.0", badge:"APP OF THE FREE" },
 ];
 
 const biggestShowImages = [
-  { src:"/art/america-movies-80s-v1.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", label:"THE MOVIES" },
-  { src:"/art/america-sports-80s-v1.png", alt:"American Bear among boxing, football, baseball, basketball, NASCAR, athletics and rodeo", label:"THE SPORTS" },
+  { src:"/art/america-movies-clean-v2.png", alt:"A panoramic American movie universe with action, science fiction, adventure, horror and western characters", label:"THE MOVIES" },
+  { src:"/art/america-sports-clean-v2.png", alt:"American Bear among boxing, football, baseball, basketball, NASCAR, athletics and rodeo", label:"THE SPORTS" },
   { src:"/art/america-tv-80s-v1.png", alt:"Classic American television icons including Knight Rider, the A-Team, Alf, Kermit and Miss Piggy", label:"LIVING COLOR" },
   { src:"/art/america-latenight-80s-v1.png", alt:"American crime cinema and action television scene", label:"LATE NIGHT" },
 ];
@@ -26,7 +26,7 @@ export default function Home() {
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
       <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
-      <div className="money-cartoon"><img src="/art/america-hollywood-80s-v1.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
+      <div className="money-cartoon"><img src="/art/america-money-neon-v2.png" alt="A sharply detailed American panorama of Hollywood, Mount Rushmore, stacks of dollar bills and a collection of firearms"/></div>
     </section>
 
     <nav className="timeline" aria-label="American chapters">{chapters.map((chapter,index)=><a href={`#${chapter.id}`} key={chapter.id}><b>{String(index+1).padStart(2,"0")}</b><span>{chapter.id}</span></a>)}</nav>
