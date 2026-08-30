@@ -21,8 +21,13 @@ const biggestShowImages = [
 
 export default function Home() {
   return <main id="top">
-    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><a href="#chapters">ENTER THE SHOW ↓</a></header>
+    <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><nav className="token-nav" aria-label="American Bear navigation"><a href="#token">TOKEN</a><a href="#memes">MEMES</a><a href="#chapters">LORE</a><a href="#token">CONTRACT: TBA</a></nav></header>
     <HeroFilm />
+    <section className="meme-launch" id="memes" aria-label="American Bear meme token">
+      <div className="meme-launch-copy"><p>THE ALL-AMERICAN MEME TOKEN</p><h1>$BEAR</h1><strong>BUILT FOR THE TIMELINE.</strong><span>NO ROADMAP THEATRE. JUST MEMES, CULTURE AND THE DEN.</span></div>
+      <div className="meme-launch-actions"><a href="#token">TOKEN STATUS</a><a href="#chapters">ENTER THE LORE</a></div>
+      <div className="meme-ticker" aria-label="American Bear ticker"><span>$BEAR</span><b>MEMES OVER MEETINGS</b><span>COMMUNITY FIRST</span><b>CONTRACT: TBA</b><span>AMERICAN BEAR</span></div>
+    </section>
 
     <section className="money-break" id="chapters" aria-label="This is America: money and mythology">
       <header className="money-title"><div><small>1776 — NOW</small><p>POWER · MONEY · MYTH · MEDIA · FREEDOM · FAME</p></div><h1>THIS IS AMERICA.</h1></header>
@@ -52,7 +57,7 @@ export default function Home() {
       <ArcadeGame artwork="/art/american-bear-arcade-v8.png" />
     </section>
 
-    <section className="token" id="token"><p>AMERICAN BEAR</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>No contract yet. Ignore unofficial links.</span></section>
+    <section className="token" id="token"><p>AMERICAN BEAR MEME TOKEN</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>Contract address: TBA. Ignore unofficial links.</span><div className="token-status"><b>TICKER <em>$BEAR</em></b><b>COMMUNITY <em>THE DEN</em></b><b>STATUS <em>NOT LIVE</em></b></div></section>
     <footer><div className="brand"><AgeBadge/><span>AMERICAN BEAR</span></div><p>SATIRE WITH AFFECTION. © 2026</p></footer>
   </main>;
 }
