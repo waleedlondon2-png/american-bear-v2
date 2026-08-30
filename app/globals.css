@@ -168,3 +168,6 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Fresh 1980s artwork is delivered as final illustration; keep it clean and unfiltered. */
 .money-cartoon>img,.show-polaroid img,.chapter .vhs-window>img{filter:none!important;box-shadow:none!important}
+
+/* Crypto café is deliberately shown as its supplied original artwork. */
+.chapter.chapter-3 .vhs-window>img{filter:none!important;box-shadow:none!important}
