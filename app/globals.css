@@ -236,3 +236,14 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Subtle five-percent scale increase instead of the previous twenty-percent version. */
 @media(min-width:701px){.movie-poster{width:50.4%}.polaroid-poster{width:59.85%}.wide-poster{width:67.2%}.nwa-postcard{width:81.9%}}
+
+
+/* Bring the four wall pieces back into a close, overlapping collage. */
+@media(min-width:701px){
+  .bedroom-room{min-height:1900px}
+  .poster-wall{min-height:1450px}
+  .movie-poster{left:-2%;top:0}
+  .polaroid-poster{left:34%;top:14%}
+  .wide-poster{left:19%;right:auto;top:38%}
+  .nwa-postcard{left:5%;top:62%}
+}
