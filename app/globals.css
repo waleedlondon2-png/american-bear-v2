@@ -215,3 +215,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Match the selected framed landscape postcard treatment; the Superman movie poster remains unchanged. */
 .polaroid-poster,.wide-poster{padding:clamp(12px,1.2vw,20px)!important;background:#eee1c8!important;border:clamp(7px,.8vw,13px) solid #9b603f!important;box-shadow:0 30px 56px #000e!important}.polaroid-poster img,.wide-poster img{aspect-ratio:16/9!important;object-fit:cover!important}.polaroid-poster{left:31%;top:18%;width:66%;transform:rotate(4deg)!important}.wide-poster{right:-3%;top:49%;width:73%;transform:rotate(-2.5deg)!important}.nwa-postcard{aspect-ratio:auto}@media(max-width:700px){.polaroid-poster{left:18%;top:25%;width:82%}.wide-poster{right:-2%;top:48%;width:91%}}
+
+
+/* Move the two centre landscape frames right without changing the Superman or NWA pieces. */
+@media(min-width:701px){.polaroid-poster{left:44%}.wide-poster{right:-17%}}
