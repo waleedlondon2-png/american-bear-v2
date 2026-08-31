@@ -1,5 +1,6 @@
 import HeroFilm from "./HeroFilm";
 import ArcadeGame from "./ArcadeGame";
+import CompositeArtwork from "./CompositeArtwork";
 
 function AgeBadge() {
   return <span className="age-badge" aria-label="Film classifications U, PG, 12, 15 and 18"><b>U</b><b>PG</b><b>12</b><b>15</b><b>18</b></span>;
@@ -20,6 +21,8 @@ const biggestShowImages = [
   { src:"/art/america-crime-cinema-chuck-v1.png", alt:"American crime cinema and action television scene", label:"LATE NIGHT" },
 ];
 
+const biggestShowSources = biggestShowImages.map((image) => image.src);
+
 export default function Home() {
   return <main id="top">
     <header className="masthead"><a className="brand" href="#top"><AgeBadge /><span>AMERICAN BEAR</span></a><nav className="token-nav" aria-label="American Bear navigation"><a href="#token">TOKEN</a><a href="#memes">MEMES</a><a href="#chapters">LORE</a><a href="#token">CONTRACT: TBA</a></nav></header>
@@ -36,7 +39,7 @@ export default function Home() {
       {chapters.map((chapter,index)=><article className={`chapter chapter-${index}`} id={chapter.id} key={chapter.id}>
         <header className="chapter-head"><div><small>{chapter.era}</small><p>{chapter.kicker}</p></div><h2>{chapter.title}</h2></header>
         {chapter.id === "movies" ? <div className="show-gallery" aria-label="The Biggest Show on Earth gallery">
-          <div className="show-triptych">{biggestShowImages.map((image)=><figure className="show-polaroid" key={image.src}><img src={image.src} alt={image.alt}/><figcaption>{image.label}</figcaption></figure>)}</div>
+          <div className="show-triptych"><CompositeArtwork images={biggestShowSources} alt="This Is America: one unified image containing money, movies, sport, classic television and late-night cinema."/></div>
         </div> : <figure className="chapter-art">
           <div className="vhs-case">
             <span className="vhs-sticker vhs-sticker-left">VHS</span>
