@@ -228,3 +228,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Final generous spacing: keep at least about 90% of each wall frame unobstructed. */
 @media(min-width:701px){.bedroom-room{min-height:3100px}.poster-wall{min-height:2350px}.polaroid-poster{top:43%}.wide-poster{top:68%}.nwa-postcard{top:97%}}
+
+
+/* Return to the layered wall feel, scaled up about 20% with a little extra air. */
+@media(min-width:701px){.bedroom-room{min-height:2800px}.poster-wall{min-height:2300px}.movie-poster{width:58%}.polaroid-poster{left:37%;top:30%;width:68%}.wide-poster{left:22%;top:59%;width:77%}.nwa-postcard{left:2%;top:89%;width:94%}}
