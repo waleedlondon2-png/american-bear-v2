@@ -247,3 +247,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
   .wide-poster{left:19%;right:auto;top:38%}
   .nwa-postcard{left:5%;top:62%}
 }
+
+
+/* Restore the original centred CRT proportion and its full-size placement. */
+.living-room .film-media{height:auto!important;min-height:0!important;aspect-ratio:1672/941!important}
