@@ -224,3 +224,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 /* Give every bedroom-wall frame its own space: nearly the whole image remains visible. */
 @media(min-width:701px){.bedroom-room{min-height:clamp(2100px,158vw,2520px)}.bedroom-copy{width:min(520px,40%)}.poster-wall{width:min(1320px,100%);min-height:clamp(1820px,137vw,2240px);margin:clamp(40px,5vw,90px) auto 0}.movie-poster{left:0;top:0;width:48%;transform:rotate(-3deg)}.polaroid-poster{left:40%;top:25%;width:57%;transform:rotate(3deg)!important}.wide-poster{left:31%;right:auto;top:53%;width:64%;transform:rotate(-2deg)!important}.nwa-postcard{left:6%;bottom:auto;top:80%;width:78%;transform:rotate(1deg)}}
 @media(max-width:700px){.bedroom-room{min-height:unset}.poster-wall{min-height:0;display:flex;flex-direction:column;gap:36px;margin-top:38px}.wall-poster,.movie-poster,.polaroid-poster,.wide-poster,.nwa-postcard{position:relative;inset:auto!important;width:100%;margin:0;transform:none!important}.nwa-postcard{order:4}}
+
+
+/* Final generous spacing: keep at least about 90% of each wall frame unobstructed. */
+@media(min-width:701px){.bedroom-room{min-height:3100px}.poster-wall{min-height:2350px}.polaroid-poster{top:43%}.wide-poster{top:68%}.nwa-postcard{top:97%}}
