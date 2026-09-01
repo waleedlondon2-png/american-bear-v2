@@ -307,3 +307,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
   .wide-poster{left:25%;top:31%}
   .nwa-postcard{left:7%;top:62%}
 }
+
+
+/* Make only the top Superman frame twenty percent larger. */
+@media(min-width:701px){.movie-poster{width:81.6%}}
