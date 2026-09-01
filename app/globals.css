@@ -319,3 +319,10 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 /* Flash only the police light bar; remove the broad centre glare. */
 .nwa-postcard span{inset:12% 34% auto!important;height:16%!important;opacity:.68!important;mix-blend-mode:screen!important;background:linear-gradient(90deg,transparent 0 14%,#ff1c3f88 22% 38%,transparent 46% 54%,#1b6eff88 62% 78%,transparent 86%)!important;filter:blur(2px)}
 @keyframes nwa-sirens{50%{opacity:.28;filter:blur(2px) hue-rotate(165deg)}100%{opacity:.7;filter:blur(2px)}}
+
+
+/* Keep the King Kong / Rushmore frame aligned with the other landscape wall art. */
+@media(min-width:701px){
+  .bedroom-feature{width:68%;aspect-ratio:16/9}
+  .bedroom-feature img{height:100%;aspect-ratio:auto;object-fit:cover}
+}
