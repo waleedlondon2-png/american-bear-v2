@@ -298,3 +298,12 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
   .movie-poster img,.wide-poster img,.nwa-postcard img{width:100%;height:100%;aspect-ratio:auto!important;object-fit:cover!important}
 }
 @media(max-width:700px){.movie-poster,.wide-poster,.nwa-postcard{width:100%;aspect-ratio:16/9!important}.movie-poster img,.wide-poster img,.nwa-postcard img{height:100%;aspect-ratio:auto!important;object-fit:cover!important}}
+
+
+/* More breathing room between the three matching frames, with only a light overlap. */
+@media(min-width:701px){
+  .poster-wall{min-height:1450px}
+  .movie-poster{left:1%;top:0}
+  .wide-poster{left:25%;top:31%}
+  .nwa-postcard{left:7%;top:62%}
+}
