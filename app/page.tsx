@@ -26,7 +26,7 @@ export default function Home() {
     <section className="house-room bedroom-room" id="bedroom" aria-label="The American Bear bedroom">
       <div className="bedroom-copy"><p>03 / THE BEDROOM</p><h2>THE WALL<br/>OF FAME.</h2><span>POSTERS, VHS TAPES AND THE AMERICAN NIGHT SHIFT.</span></div>
       <div className="poster-wall">
-        <figure className="wall-poster movie-poster poster-one"><img src="/art/america-movie-collage-v1.png" alt="American movie collage" /></figure>
+        <figure className="wall-poster movie-poster poster-one"><img src="/art/america-movie-collage-cowboy-removed-final.png" alt="American movie collage" /></figure>
         <figure className="wall-poster wide-poster poster-three"><img src="/art/america-crime-cinema-chuck-v1.png" alt="American crime cinema collage" /></figure>
         <figure className="nwa-postcard"><img src="/art/bear-police-lights-40.webp" alt="American Bear NWA police scene with flashing sirens" /><span aria-hidden="true"/></figure>
       </div>
