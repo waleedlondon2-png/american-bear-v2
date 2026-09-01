@@ -277,3 +277,11 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Superman stays short: make it a wide landscape poster, not a taller enlargement. */
 @media(min-width:701px){.movie-poster{width:58%}.movie-poster img{aspect-ratio:16/9!important;object-fit:cover!important;object-position:center 30%}}
+
+
+/* Compact, light overlap: the poster edges layer, while almost all artwork remains visible. */
+@media(min-width:701px){
+  .poster-wall{min-height:1380px}
+  .wide-poster{top:27%}
+  .nwa-postcard{top:53%}
+}
