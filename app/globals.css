@@ -285,3 +285,16 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
   .wide-poster{top:27%}
   .nwa-postcard{top:53%}
 }
+
+
+/* Three equal landscape frames, intentionally stacked as one wall collage. */
+@media(min-width:701px){
+  .bedroom-room{min-height:1700px}
+  .poster-wall{min-height:1120px}
+  .movie-poster,.wide-poster,.nwa-postcard{width:68%;padding:clamp(8px,.9vw,14px)!important;aspect-ratio:16/9!important}
+  .movie-poster{left:2%;top:0;transform:rotate(-4deg)!important}
+  .wide-poster{left:21%;right:auto;top:23%;transform:rotate(3deg)!important}
+  .nwa-postcard{left:7%;top:46%;transform:rotate(-2deg)!important}
+  .movie-poster img,.wide-poster img,.nwa-postcard img{width:100%;height:100%;aspect-ratio:auto!important;object-fit:cover!important}
+}
+@media(max-width:700px){.movie-poster,.wide-poster,.nwa-postcard{width:100%;aspect-ratio:16/9!important}.movie-poster img,.wide-poster img,.nwa-postcard img{height:100%;aspect-ratio:auto!important;object-fit:cover!important}}
