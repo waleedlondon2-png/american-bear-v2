@@ -14,7 +14,7 @@ export default function Home() {
 
     <section className="living-room" id="living-room" aria-label="The American Bear living room">
       <HeroFilm />
-      <aside className="meme-sticker tv-meme" aria-label="American Bear watching television"><i aria-hidden="true"/><b>YO… WHAT'S ON?</b></aside>
+      <aside className="meme-sticker tv-meme" aria-label="American Bear watching television"><i aria-hidden="true"/></aside>
       <p className="room-marker">01 / THE LIVING ROOM</p>
     </section>
 
@@ -28,14 +28,14 @@ export default function Home() {
         <figure className="wall-poster postcard postcard-politics"><img src="/art/america-politics-postcard-v1.png" alt="American political history collage" /></figure>
         <figure className="wall-poster postcard postcard-music"><img src="/art/america-music-postcard-v1.png" alt="American music collage" /></figure>
       </div>
-      <div className="meme-gap-stickers" aria-label="American Bear meme notes"><aside className="meme-sticker meme-sport"><i aria-hidden="true"/><b>HODL MY BURGER.</b></aside><aside className="meme-sticker meme-tv"><i aria-hidden="true"/><b>DIP? I ORDERED EXTRA CHEESE.</b></aside><aside className="meme-sticker meme-music"><i aria-hidden="true"/><b>WEN MOON? AFTER PIZZA.</b></aside></div>
+      <div className="meme-gap-stickers" aria-label="American Bear meme notes"><aside className="meme-sticker meme-sport"><i aria-hidden="true"/></aside><aside className="meme-sticker meme-tv"><i aria-hidden="true"/></aside><aside className="meme-sticker meme-music"><i aria-hidden="true"/></aside></div>
     </section>
 
     <section className="house-room kitchen-room" id="kitchen" aria-label="The American Bear kitchen">
       <div className="room-copy"><p>04 / THE KITCHEN</p><h1>MEMES<br/>ON THE MENU.</h1><span>THE $BEAR DEN IS OPEN. COFFEE, CULTURE AND A LITTLE CHAOS.</span><a href="#token">TOKEN STATUS →</a></div>
       <figure className="room-art kitchen-art"><img src="/art/america-modern-meme-class-v31.png" alt="American Bear meme culture café scene" /></figure>
       <div className="kitchen-details" aria-hidden="true"><i/><i/><i/><b>HOT COFFEE · COLD TAKES</b></div>
-      <aside className="meme-sticker kitchen-meme" aria-label="American Bear with food"><i aria-hidden="true"/><b>BULLISH ON BURGERS.<br/>$BEAR AFTER LUNCH.</b></aside>
+      <aside className="meme-sticker kitchen-meme" aria-label="American Bear with food"><i aria-hidden="true"/></aside>
     </section>
 
     <section className="house-room arcade-room" aria-label="The American Bear arcade room">
@@ -43,7 +43,7 @@ export default function Home() {
       <ArcadeGame artwork="/art/american-bear-arcade-v8.png" />
     </section>
 
-    <section className="token" id="token"><p>AMERICAN BEAR MEME TOKEN</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>Contract address: TBA. Ignore unofficial links.</span><aside className="meme-sticker token-meme" aria-label="American Bear meme"><i aria-hidden="true"/><b>$BEAR COMING SOON.</b></aside><div className="token-status"><b>TICKER <em>$BEAR</em></b><b>COMMUNITY <em>THE DEN</em></b><b>STATUS <em>NOT LIVE</em></b></div></section>
+    <section className="token" id="token"><p>AMERICAN BEAR MEME TOKEN</p><h2>$BEAR</h2><strong>COMING SOON</strong><span>Contract address: TBA. Ignore unofficial links.</span><aside className="meme-sticker token-meme" aria-label="American Bear meme"><i aria-hidden="true"/></aside><div className="token-status"><b>TICKER <em>$BEAR</em></b><b>COMMUNITY <em>THE DEN</em></b><b>STATUS <em>NOT LIVE</em></b></div></section>
     <footer><div className="brand"><AgeBadge/><span>AMERICAN BEAR</span></div><p>SATIRE WITH AFFECTION. © 2026</p></footer>
   </main>;
 }
