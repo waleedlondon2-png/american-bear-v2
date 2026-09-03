@@ -326,3 +326,8 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
   .bedroom-feature{width:68%;aspect-ratio:16/9}
   .bedroom-feature img{height:100%;aspect-ratio:auto;object-fit:cover}
 }
+
+
+/* Give the Mount Rushmore meme artwork and its postcard frame more presence on the wall. */
+@media(min-width:701px){.bedroom-feature{width:min(80%,980px)}}
+@media(max-width:700px){.bedroom-feature{width:90%}}
