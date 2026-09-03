@@ -25,7 +25,7 @@ export default function Home() {
 
     <section className="house-room bedroom-room" id="bedroom" aria-label="The American Bear bedroom">
       <div className="bedroom-copy"><p>03 / THE BEDROOM</p><h2>THE WALL<br/>OF FAME.</h2><span>POSTERS, VHS TAPES AND THE AMERICAN NIGHT SHIFT.</span></div>
-      <figure className="bedroom-feature"><img src="/art/america-money-guns-rushmore-no-ar-flag-v1.png" alt="American Bear King Kong and Mount Rushmore collage" /></figure>
+      <figure className="bedroom-feature"><img src="/art/america-rushmore-planes-final-v1.png" alt="American Bear King Kong and Mount Rushmore collage" /></figure>
       <div className="poster-wall">
         <figure className="wall-poster movie-poster poster-one"><img src="/art/america-movie-collage-cowboy-removed-final.png" alt="American movie collage" /></figure>
         <figure className="wall-poster wide-poster poster-three"><img src="/art/america-crime-cinema-chuck-v1.png" alt="American crime cinema collage" /></figure>
