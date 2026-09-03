@@ -355,3 +355,8 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 @media(min-width:701px){.bedroom-room{min-height:clamp(2300px,170vw,2850px)!important}.postcard-wall{min-height:clamp(1720px,128vw,2100px)!important}.postcard-wall .postcard-hollywood,.postcard-wall .postcard-sports,.postcard-wall .postcard-tv,.postcard-wall .postcard-politics,.postcard-wall .postcard-music{width:72%!important}.postcard-wall .postcard-hollywood{left:-4%!important;top:0!important}.postcard-wall .postcard-sports{left:30%!important;top:16%!important}.postcard-wall .postcard-tv{left:-2%!important;top:33%!important}.postcard-wall .postcard-politics{left:30%!important;top:50%!important}.postcard-wall .postcard-music{left:0!important;top:67%!important}}
 @media(max-width:700px){.postcard-wall{gap:0!important}.postcard-wall .postcard+.postcard{margin-top:-14px!important}}
 
+
+
+/* The supplied animated burger meme is a small, unchanged overlay in the existing kitchen scene. */
+.mcdonalds-bear-gif{position:absolute;z-index:4;right:clamp(18px,4vw,72px);bottom:clamp(18px,3vw,54px);display:block;width:clamp(94px,11vw,180px);height:auto;border-radius:12px;box-shadow:0 12px 24px #10050199;mix-blend-mode:multiply}
+@media(max-width:700px){.mcdonalds-bear-gif{right:16px;bottom:16px;width:92px}}
