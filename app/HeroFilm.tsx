@@ -5,12 +5,15 @@ import { useEffect, useRef, useState } from "react";
 const films = [
   { kind: "video", src: "/media/american-bear.mp4", label: "American Bear film" },
   { kind: "video", src: "/media/2026-08-22 22.04.52-2-2 (1).mp4", label: "American Bear alternate film" },
+  { kind: "video", src: "/media/american-bear-movies.mp4", label: "American Bear movies film" },
 ];
 
 export default function HeroFilm() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const bootTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
   const startTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
+  const remainingFilmIndices = useRef<number[]>([]);
+  const lastFilmIndex = useRef<number | null>(null);
   const [powered, setPowered] = useState(false);
   const [booting, setBooting] = useState(false);
   const [filmIndex, setFilmIndex] = useState<number | null>(null);
@@ -32,6 +35,17 @@ export default function HeroFilm() {
     });
   }, [filmIndex, powered, activeFilm?.kind]);
 
+  const selectNextFilm = () => {
+    if (remainingFilmIndices.current.length === 0) {
+      const shuffled = films.map((_, index) => index).sort(() => Math.random() - 0.5);
+      if (shuffled.length > 1 && shuffled[0] === lastFilmIndex.current) [shuffled[0], shuffled[1]] = [shuffled[1], shuffled[0]];
+      remainingFilmIndices.current = shuffled;
+    }
+    const nextIndex = remainingFilmIndices.current.shift() ?? 0;
+    lastFilmIndex.current = nextIndex;
+    return nextIndex;
+  };
+
   const togglePower = () => {
     const video = videoRef.current;
     if (bootTimer.current) window.clearTimeout(bootTimer.current);
@@ -47,7 +61,7 @@ export default function HeroFilm() {
       setFilmIndex(null);
       return;
     }
-    const nextFilmIndex = Math.floor(Math.random() * films.length);
+    const nextFilmIndex = selectNextFilm();
     setPowered(true);
     setBooting(true);
     bootTimer.current = window.setTimeout(() => {
