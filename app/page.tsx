@@ -22,7 +22,6 @@ export default function Home() {
       <figure className="bedroom-feature"><img src="/art/america-rushmore-satoshi-restored-v1.png" alt="American Bear King Kong and Mount Rushmore collage" /></figure>
       <div className="poster-wall postcard-wall" aria-label="American Bear postcard wall">
         <figure className="wall-poster postcard postcard-hollywood"><img src="/art/america-movie-collage-cowboy-removed-final.png" alt="Hollywood movie collage" /></figure>
-        <figure className="wall-poster postcard postcard-action"><img src="/art/america-action-sport-war-postcard-v1.png" alt="American action, sport and adventure collage" /></figure>
         <figure className="wall-poster postcard postcard-sports"><img src="/art/america-sports-postcard-v1.png" alt="American sports collage" /></figure>
         <figure className="wall-poster postcard postcard-tv"><img src="/art/america-tv-postcard-v1.png" alt="American television collage" /></figure>
         <figure className="wall-poster postcard postcard-politics"><img src="/art/america-politics-postcard-v1.png" alt="American political history collage" /></figure>
