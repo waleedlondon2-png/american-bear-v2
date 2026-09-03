@@ -31,13 +31,13 @@ export default function Home() {
     </section>
 
     <section className="house-room kitchen-room" id="kitchen" aria-label="The American Bear kitchen">
-      <div className="room-copy"><p>02 / THE KITCHEN</p><h1>MEMES<br/>ON THE MENU.</h1><span>THE $BEAR DEN IS OPEN. COFFEE, CULTURE AND A LITTLE CHAOS.</span><a href="#token">TOKEN STATUS →</a></div>
+      <div className="room-copy"><p>04 / THE KITCHEN</p><h1>MEMES<br/>ON THE MENU.</h1><span>THE $BEAR DEN IS OPEN. COFFEE, CULTURE AND A LITTLE CHAOS.</span><a href="#token">TOKEN STATUS →</a></div>
       <figure className="room-art kitchen-art"><img src="/art/america-modern-meme-class-v31.png" alt="American Bear meme culture café scene" /></figure>
       <div className="kitchen-details" aria-hidden="true"><i/><i/><i/><b>HOT COFFEE · COLD TAKES</b></div>
     </section>
 
     <section className="house-room arcade-room" aria-label="The American Bear arcade room">
-      <div className="arcade-copy"><p>04 / THE ARCADE</p><h2>INSERT<br/>COIN.</h2></div>
+      <div className="arcade-copy"><p>05 / THE ARCADE</p><h2>INSERT<br/>COIN.</h2></div>
       <ArcadeGame artwork="/art/american-bear-arcade-v8.png" />
     </section>
 
