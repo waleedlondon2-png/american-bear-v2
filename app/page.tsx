@@ -26,10 +26,13 @@ export default function Home() {
     <section className="house-room bedroom-room" id="bedroom" aria-label="The American Bear bedroom">
       <div className="bedroom-copy"><p>03 / THE BEDROOM</p><h2>THE WALL<br/>OF FAME.</h2><span>POSTERS, VHS TAPES AND THE AMERICAN NIGHT SHIFT.</span></div>
       <figure className="bedroom-feature"><img src="/art/america-rushmore-satoshi-restored-v1.png" alt="American Bear King Kong and Mount Rushmore collage" /></figure>
-      <div className="poster-wall">
-        <figure className="wall-poster movie-poster poster-one"><img src="/art/america-movie-collage-cowboy-removed-final.png" alt="American movie collage" /></figure>
-        <figure className="wall-poster wide-poster poster-three"><img src="/art/america-crime-cinema-chuck-v1.png" alt="American crime cinema collage" /></figure>
-        <figure className="nwa-postcard"><img src="/art/bear-police-lights-40.webp" alt="American Bear NWA police scene with flashing sirens" /><span aria-hidden="true"/></figure>
+      <div className="poster-wall postcard-wall" aria-label="American Bear postcard wall">
+        <figure className="wall-poster postcard postcard-hollywood"><img src="/art/america-movie-collage-cowboy-removed-final.png" alt="Hollywood movie collage" /></figure>
+        <figure className="wall-poster postcard postcard-action"><img src="/art/america-action-sport-war-postcard-v1.png" alt="American action, sport and adventure collage" /></figure>
+        <figure className="wall-poster postcard postcard-sports"><img src="/art/america-sports-postcard-v1.png" alt="American sports collage" /></figure>
+        <figure className="wall-poster postcard postcard-tv"><img src="/art/america-tv-postcard-v1.png" alt="American television collage" /></figure>
+        <figure className="wall-poster postcard postcard-politics"><img src="/art/america-politics-postcard-v1.png" alt="American political history collage" /></figure>
+        <figure className="wall-poster postcard postcard-music"><img src="/art/america-music-postcard-v1.png" alt="American music collage" /></figure>
       </div>
     </section>
 
