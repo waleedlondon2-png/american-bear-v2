@@ -17,12 +17,6 @@ export default function Home() {
       <p className="room-marker">01 / THE LIVING ROOM</p>
     </section>
 
-    <section className="house-room kitchen-room" id="kitchen" aria-label="The American Bear kitchen">
-      <div className="room-copy"><p>02 / THE KITCHEN</p><h1>MEMES<br/>ON THE MENU.</h1><span>THE $BEAR DEN IS OPEN. COFFEE, CULTURE AND A LITTLE CHAOS.</span><a href="#token">TOKEN STATUS →</a></div>
-      <figure className="room-art kitchen-art"><img src="/art/america-modern-meme-class-v31.png" alt="American Bear meme culture café scene" /></figure>
-      <div className="kitchen-details" aria-hidden="true"><i/><i/><i/><b>HOT COFFEE · COLD TAKES</b></div>
-    </section>
-
     <section className="house-room bedroom-room" id="bedroom" aria-label="The American Bear bedroom">
       <div className="bedroom-copy"><p>03 / THE BEDROOM</p><h2>THE WALL<br/>OF FAME.</h2><span>POSTERS, VHS TAPES AND THE AMERICAN NIGHT SHIFT.</span></div>
       <figure className="bedroom-feature"><img src="/art/america-rushmore-satoshi-restored-v1.png" alt="American Bear King Kong and Mount Rushmore collage" /></figure>
@@ -34,6 +28,12 @@ export default function Home() {
         <figure className="wall-poster postcard postcard-politics"><img src="/art/america-politics-postcard-v1.png" alt="American political history collage" /></figure>
         <figure className="wall-poster postcard postcard-music"><img src="/art/america-music-postcard-v1.png" alt="American music collage" /></figure>
       </div>
+    </section>
+
+    <section className="house-room kitchen-room" id="kitchen" aria-label="The American Bear kitchen">
+      <div className="room-copy"><p>02 / THE KITCHEN</p><h1>MEMES<br/>ON THE MENU.</h1><span>THE $BEAR DEN IS OPEN. COFFEE, CULTURE AND A LITTLE CHAOS.</span><a href="#token">TOKEN STATUS →</a></div>
+      <figure className="room-art kitchen-art"><img src="/art/america-modern-meme-class-v31.png" alt="American Bear meme culture café scene" /></figure>
+      <div className="kitchen-details" aria-hidden="true"><i/><i/><i/><b>HOT COFFEE · COLD TAKES</b></div>
     </section>
 
     <section className="house-room arcade-room" aria-label="The American Bear arcade room">
