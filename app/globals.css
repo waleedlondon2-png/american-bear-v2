@@ -347,3 +347,10 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 
 /* Keep every remaining postcard at the Hollywood card scale after removing the action collage. */
 @media(min-width:701px){.postcard-wall .postcard-hollywood,.postcard-wall .postcard-sports,.postcard-wall .postcard-tv,.postcard-wall .postcard-politics,.postcard-wall .postcard-music{width:58%!important}.postcard-wall .postcard-hollywood{left:-2%!important;top:0!important}.postcard-wall .postcard-sports{left:36%!important;top:18%!important}.postcard-wall .postcard-tv{left:4%!important;top:38%!important}.postcard-wall .postcard-politics{left:38%!important;top:56%!important}.postcard-wall .postcard-music{left:8%!important;top:76%!important}.postcard-wall{min-height:clamp(1900px,140vw,2500px)!important}}
+
+
+/* Full-size, uncropped postcard art with a tighter visible overlap. */
+.postcard-wall .postcard{aspect-ratio:auto!important;overflow:visible!important}
+.postcard-wall .postcard img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;background:#15110f}
+@media(min-width:701px){.bedroom-room{min-height:clamp(2300px,170vw,2850px)!important}.postcard-wall{min-height:clamp(1720px,128vw,2100px)!important}.postcard-wall .postcard-hollywood,.postcard-wall .postcard-sports,.postcard-wall .postcard-tv,.postcard-wall .postcard-politics,.postcard-wall .postcard-music{width:72%!important}.postcard-wall .postcard-hollywood{left:-4%!important;top:0!important}.postcard-wall .postcard-sports{left:30%!important;top:16%!important}.postcard-wall .postcard-tv{left:-2%!important;top:33%!important}.postcard-wall .postcard-politics{left:30%!important;top:50%!important}.postcard-wall .postcard-music{left:0!important;top:67%!important}}
+@media(max-width:700px){.postcard-wall{gap:0!important}.postcard-wall .postcard+.postcard{margin-top:-14px!important}}
