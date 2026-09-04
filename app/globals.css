@@ -360,3 +360,7 @@ html,body{background-color:#06101d!important;background-image:linear-gradient(#0
 /* The supplied animated burger meme is a small, unchanged overlay in the existing kitchen scene. */
 .mcdonalds-bear-gif{position:absolute!important;z-index:20!important;right:clamp(24px,5vw,92px)!important;top:clamp(28px,4vw,76px)!important;bottom:auto!important;display:block!important;width:clamp(140px,15vw,250px)!important;height:auto!important;opacity:1!important;visibility:visible!important;border-radius:14px;box-shadow:0 14px 30px #100501cc;mix-blend-mode:normal!important}
 @media(max-width:700px){.mcdonalds-bear-gif{right:16px!important;top:16px!important;width:120px!important}}
+
+
+/* The original CRT remains the complete base image; the bear is a separate foreground layer. */
+.film-media{position:relative;overflow:visible}.hero-bear-layer{position:absolute;z-index:12;left:clamp(14px,3vw,64px);bottom:clamp(-115px,-7vw,-45px);width:clamp(115px,15vw,260px);height:auto;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 12px 10px #0008);pointer-events:none}@media(max-width:700px){.hero-bear-layer{left:10px;bottom:-45px;width:116px}}
