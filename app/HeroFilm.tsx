@@ -126,7 +126,6 @@ export default function HeroFilm() {
           <b className="power-led" aria-hidden="true" />
           <div className="tv-console" aria-hidden="true"><span>COLORVISION 1988</span><i/><i/><b>VHF · UHF</b></div>
         </div>
-        <img className="hero-bear-layer" src="/art/american-bear-mcdonalds-burger-v1.gif" alt="American Bear pointing toward the television" />
       </div>
       <div className="vcr-cabinet" aria-label="American Bear VCR controls">
         <img className="original-vcr-cabinet" src="/art/american-bear-vcr-cabinet.png" alt="Dark walnut cabinet with a vintage VCR" />
